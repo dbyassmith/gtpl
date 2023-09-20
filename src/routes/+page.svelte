@@ -139,7 +139,8 @@
 <div id="home">
     <div id="main">
         <div class="text">
-            <h6>{leagueName}</h6>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/j_TzeZ5XIn8?si=8c8ga8AWs6hx43KJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <!-- homepageText contains the intro text for your league, this gets edited in /src/lib/utils/leagueInfo.js -->
             {@html homepageText }
             <!-- Most recent Blog Post (if enabled) -->
