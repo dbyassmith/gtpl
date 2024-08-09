@@ -418,4 +418,10 @@
     p {
         color: #212121;
     }
+
+    @media (prefers-color-scheme: dark) {
+        p {
+        color: #FFF;
+    }
+    }
 </style>
