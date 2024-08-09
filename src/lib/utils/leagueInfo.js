@@ -28,7 +28,11 @@ export const managers = [
         name: "Anil",
         link: 1,
       },
-
+      bio: "David, a masterful architect of fantasy football intrigue, takes his rightful place as the league's venerable Commissioner. His illustrious tenure has many triumphs but is most recently highlighted by the creation and triumphant launch of the \"Commissioner's Cup,\" a symbol of prestige and excellence from the regular season. With an unwavering hand, he has expertly navigated the turbulent waters of legislative crises, ensuring the league's continued vitality and fairness. A virtuoso in the realm of creativity, David's guiding influence has spawned a multitude of innovative endeavors that enrich the league's tapestry. As a team owner, his accolades include two finals appearances, a triumphant victory in the inaugural Commissioner's Cup, and a pioneering mastery of the strategic art of tanking, solidifying his legacy as a true luminary in the annals of fantasy football lore.",
+      valuePosition:"RB",
+      philosophy: "For those who exalt themselves will be humbled, and those who humble themselves will be exalted.",
+      preferredContact:"Sleeper",
+      favoritePlayer: 9509
     },
     {
       managerID: "346451454619291648",
@@ -38,8 +42,8 @@ export const managers = [
       rival: {
         name: "David",
         link: 0,
-
       },
+      valuePosition:"EDGE",
       philosophy: "Negotiate for success",
       preferredContact:"Text",
       favoritePlayer: 9509
@@ -48,44 +52,108 @@ export const managers = [
       managerID: "481853441270870016",
       name: "Big Joe",
       location: "Atlanta",
-      tookOVer: "2011"
+      tookOver: "2011",
+      bio: "2xChamp. Defender of the Constitution and Justice. Warrior. Jackhammer.",
+      valuePosition:"TE",
+      rival: {
+        name: "DRC",
+        link: 0,
+      },
+      philosphy:"Try not to get injured",
+      preferredContact:"Sleeper",
     },
     {
       managerID: "481855303978053632",
       name: "Lil Joe",
-      location: "Boston"
+      location: "In the shadows of the house Brady built",
+      bio: "Masshole through and through who learned at a young age if you’re not cheating, you’re not trying.",
+      valuePosition:"QB",
+      tookOver: "2010",
+      rival: {
+        name: "Miller Fantasy Academy",
+        link: 6,
+      },
+      favoritePlayer: 9509,
+      philosphy:"Proven commodities and dumb luck",
+      preferredContact:"Text",
     },
     {
       managerID: "482672023122735104",
       name: "Keller",
-      location: "Houston"
+      location: "Houston",
+      bio: "2x champ and the only owner to ever complete the winless season. You might call him the OG sacko. He forged the blade that killed Matt Fields.",
+      valuePosition:"QB",
+      philosophy: "Boom or bust. No in between. In fantasy and in participation.",
+      preferredContact:"Text",
     },
     {
       managerID: "483318407916154880",
       name: "Michael",
       location: "Tampa",
+      bio: "The GOAT 194 sums up all you need to know about my fantasy football career. Setting the bar took 11 TDs from 3 RBs which is why they call me the RB guru. If I drafted an RB the year prior don’t draft him the next year, just ask David and Anil. That being said, I have won 1 championship, many more if JP wasn’t in the league. Outside of fantasy football I spend my time chasing kids or making kids. With 3 kids and 1 on the way, life is great. A lot of backyard football that brings me back to my glory days. I also am true to my mascot as I have 2 goats, Buc and Bolt. I am cohost on one of the greatest fantasy football podcast available, the Porta Potty. We like to stir the pot and speak the truth! Faith, Family, Fantasy Football! God Bless!",
+      valuePosition: "CB",
+      rival: {
+        name: "Everyone",
+        link: 0,
+      },
+      philosophy: "Score as many points as I possibly can. I can’t give details until I retire.",
+      preferredContact:"Text",
+
     },
     {
       managerID: "559481911498711040",
       name: "JP",
       location: "LA",
-      tookOVer: "2012"
+      tookOVer: "2012",
+      bio:"Building a dynasty quietly and by my own rules. Squeezed every drop out of the horsehoe until there was nothing left",
+      valuePosition:"PK",
+      rival: {
+        name: "No one",
+        link: 0,
+      },
+      philosophy: "Zig when everyone else zags",
+      preferredContact:"Starlink",
     },
     {
       managerID: "604399579483430912",
       name: "Larry",
       location: "Charleston",
+      bio: "My team is a consistent contender with excellent drafts, well crafted balance, and smart keeper picks. As a two time finalist, my teams have made many playoff runs and fallen short. One of these years the unlucky curse will be broken and Barefoot Bandits will rise again!",
+      valuePosition: "QB",
+      rival: {
+        name: "Darren",
+        link: 8,
+      },
+      philosophy: "Balance and Consistency",
+      preferredContact:"Text",
+      
     },
     {
       managerID: "604545938056351744",
       name: "Darren",
-      location: "Atlanta",
+      location: "Decatur",
+      bio: "Tampa Sports Fan, GT Grad",
+      valuePosition: "K",
+      rival: {
+        name: "Larry",
+        link: 7,
+      },
+      philosophy: "Try to have Fun and Not be Sacko"
     },
     {
       managerID: "720732794371776512",
       name: "Austin",
       location: "Denver",
-      tookOVer: "2021"
+      tookOVer: "2021",
+      bio: "The most recent addition to the league, Austin immediately brought value cementing himself as the 4th highest sleeper chat contributor. The same success has not been seen in his fantasy performance after dealing with 2 seasons of horrible luck - being a top 2 finisher in Points Against both seasons. Nevertheless, Austin's competitive nature, ability to overcome adversity, capacity to show immense courage, and the strength to never back down from a challenge will quickly translate to league success. Go Dirty Birds.",
+      valuePosition: "QB",
+      rival: {
+        name: "Everyone",
+        link: 0,
+      },
+      favoritePlayer: 9509,
+      philosophy: "If you look good, you feel good. If you feel good, you play good. If you play good, they pay good.",
+      preferredContact: "Text",
     }
   ]
   

@@ -15,7 +15,8 @@
         thirteen,
         fourteen,
         fifteen,
-        sixteen;
+        sixteen,
+        seventeen;
 
     const goToSection = (section) => {
         const top = section.getBoundingClientRect().top + window.pageYOffset;
@@ -76,6 +77,9 @@
     <h3 class="noUnderscore clickable" on:click={() => goToSection(sixteen)}>
         Comissioner's Cup
     </h3>
+    <h3 class="noUnderscore clickable" on:click={() => goToSection(seventeen)}>
+        Appendix
+    </h3>
 
     <hr />
 
@@ -90,19 +94,21 @@
     </p>
 
     <h2 class="sectionHeading" bind:this={two}>Governing Body</h2>
-    <p>Comissioner: David Byas-Smith</p>
-    <p>Counsel: Keller Tomassi, JP Shivanandan, Anil Nataraj</p>
-    <p>
-        The role of the Commissioner is to maintain the integrity of the league
-        and manage league milestones & activities. The Commissioner reserves the
-        right to challenge any unfair or collusive actions in addition to
-        enforcing all rules included or implied in this document. The
-        Commissioner and Counsel will make joint rulings on any issues that
-        arise during the season. The Commissioner will have final say in all
-        decisions except in cases where he needs to recuse himself. The
-        Commissioner will be responsible for collecting and distributing money
-        but is allowed to delegate this specific responsibility.
-    </p>
+    <p><span style="font-weight: bold">Commissioner:</span> David Byas-Smith</p>
+    <p>The Commissioner advocates for the entire league and manages league milestones and activities. The Commissioner is responsible for collecting and distributing money but may delegate this specific responsibility. The Commissioner has the authority to veto any ruling from the Rules Committee and can escalate the issue to a league-wide majority vote on a final decision. If the vote fails, the original ruling stands (see appendix for example). If the Commissioner has recused himself, any veto requires a unanimous decision from the remaining Rules Committee members. If at least one Rules Committee member is involved in the decision, the final decision defaults to the unanimous decision of the remaining uninvolved Rules Committee member(s).</p>
+    <p>The Commissioner has the authority to dismiss any Rules Committee member for just cause, such as non-responsiveness. This power will be exercised cautiously.</p>
+
+    <p><span style="font-weight: bold">Removal of the Commissioner:</span></p>
+    <p>The removal of the Commissioner requires a unanimous decision from the Rules Committee, which must recommend the Commissioner's removal to the league. The final decision is then made by a league-wide vote, in which the Commissioner also gets a vote.</p>
+
+    <p><span style="font-weight: bold">The Rules Committee:</span> Darren Domaracki, Joe Kummer, Anil Nataraj</p>
+    <p>The Rules Committee consists of three members elected by a league-wide vote each offseason, with no term limits. This committee ensures that all league rules are adhered to and makes all rule-related decisions. The Commissioner votes only in the case of a tiebreaker due to a recusal.</p>
+    <p>At the end of each season, The Rules Committee will address issues, propose improvements, and present these changes as a revised constitution to The League for feedback. They will submit a final revision to the league for the following season before concluding their term. The final draft of the constitution is able to be vetoed at the commissioner’s discretion.</p>
+    <p>The Rules Committee will refer to the typical standards of the Sleeper Fantasy Football app for situations not covered in the constitution. Please visit <a href="https://support.sleeper.com/en/collections/410900-fantasy-football" target="_blank">Sleeper Fantasy Football support</a> for reference materials.</p>
+
+    <p><span style="font-weight: bold">Replacement of Rules Committee Members:</span></p>
+    <p>If an RC member is removed, a replacement will be selected through a league-wide vote.</p>
+
 
     <h2 class="sectionHeading" bind:this={three}>Draft</h2>
 
@@ -127,16 +133,17 @@
     </p>
 
     <h2 class="sectionHeading" bind:this={four}>Scoring</h2>
-    <p>Scoring will follow 0.5 PPR scoring on Sleeper Fantasy Football.</p>
+    <p>All agreed to scoring rules are directly inputted into the Sleeper Fantasy Football app.
+    </p>
+    <p>Please reference all scoring points breakdown in the Georgia Tech Premier League settings in the Sleeper Fantasy Football app. 
+    </p>
 
     <h2 class="sectionHeading" bind:this={five}>Roster Size</h2>
     <p>
-        Each team’s roster will consist of 16 spots. There are 9 starters and a
-        total of 7 bench spots.
+        Each team’s roster will consist of 16 spots. There are 9 starters and a total of 7 bench spots.
     </p>
     <p>
-        1 (One) IR spot is included to support any player who has an IR
-        designation
+        There is also 1 IR spot available for players designated as IR (Injured Reserve) or PUP (Physically Unable to Perform) in the Sleeper Fantasy Football app. Players with Out, Suspended, Doubtful, NA, or DNR/holdout status designations are not eligible for the IR spot.
     </p>
 
     <h2 class="sectionHeading" bind:this={six}>Starting Lineups</h2>
@@ -150,21 +157,11 @@
     </p>
 
     <h2 class="sectionHeading" bind:this={seven}>Trades</h2>
-    <p>
-        Every trade is made at the two parties' discretion. It is every owner’s
-        responsibility to uphold the integrity of the league during the trade
-        process.
-    </p>
-    <p>A trade may involve rostered players only</p>
-    <p>All Trades are subject to review by the Commissioner</p>
-    <p>
-        Trades can be realistically pushed through for timing purposes based on
-        the Commissioner discretion
-    </p>
-    <p>
-        A team that has been eliminated from playoff contention cannot
-        participate in a trade.
-    </p>
+    <p>Trades are made at the discretion of the two parties involved. It is each owner's responsibility to uphold the integrity of the league during the trade process.</p>
+    <p>Trades may involve rostered players only; draft pick trading is not allowed.</p>
+    <p>All trades are subject to review by the Commissioner and/or Rules Committee. Trades can be expedited for timing purposes at the Commissioner's discretion.</p>
+    <p>All trades must be finalized by the end of the final game of Week 12. After this deadline, no trades can be proposed or accepted until the end of the next draft.</p>
+
 
     <h2 class="sectionHeading" bind:this={eight}>Waiver Wire</h2>
     <p>
@@ -230,7 +227,7 @@
     <h3>$10.00 Fines</h3>
     <ol>
         <li>Attempting/succeeding to trade money/otherwise for players. All games in which the players traded for will be forfeited by each team involved in the trade </li>
-        <li>Collusion, sabotage, or other serious actions deemed punishable by the Commissioner & Counsel</li>
+        <li>Collusion, sabotage, or other serious actions deemed punishable by the Rules Committee</li>
     </ol>
     <h3>$5.00 Fines</h3>
     <ol>
@@ -272,19 +269,26 @@
 
     <h2 class="sectionHeading" bind:this={fourteen}>Keepers</h2>
 
-    <p>Players drafted in the first three rounds of the draft in the previous year are not eligible to be kept.</p>
-    <p>The kept player for a team will count for the team’s draft spot in the round preceding where the player was drafted the prior year. Ex.  if Team X drafted A. Luck in the 6th round of the 2013 draft and would like to keep him,  A. Luck will be Team X’s 5th round pick of the 2014 draft.</p>
-    <p>Players can be kept for 2 years (regardless of owner) or until they are a 3rd round pick. Ex., if A. Luck was kept by Owner X and then traded that year to Owner Y, A. Luck would have only 1 more year of keeper eligibility remaining. </p>
-    <p>Players undrafted in the previous year’s draft and players drafted in rounds 10 and later will be counted as a 9th round keeper if kept</p>
-    <p>Your prospective keeper must be on your roster at the end of the season.</p>
-    <p>Claiming a keeper is optional.</p>
-    <p>Keepers must be announced by the date assigned by the Commissioner. If the deadline passes without Team A announcing a keeper, Team A will not have a keeper.</p>
-    <p>A players ‘keeper rights’ travel with them in a trade. They are bound to the player.</p>
+    <p>Keeper Eligibility:</p>
+    <p>Players drafted in the first three rounds of the draft in the previous year are not eligible to be kept. Your prospective keeper must be on your roster at the end of the season. Claiming a keeper is optional.</p>
+    <p>Keepers must be announced by the date assigned by the Commissioner. If the deadline passes without Team A announcing a keeper, Team A will not have a keeper. A player's 'keeper rights' travel with them in a trade. They are bound to the player.</p>
+    
+    <p>Keeper Cost:</p>
+    <p>The kept player for a team will count for the team’s draft spot in the round preceding where the player was drafted the prior year. Ex. if Team X drafted A. Luck in the 6th round of the 2013 draft and would like to keep him, A. Luck will be Team X’s 5th round pick of the 2014 draft.</p>
+    <p>Players can be kept for a maximum of 2 years, regardless of owner, or until they are a 3rd round pick. Ex., if A. Luck was kept by Owner X and then traded that year to Owner Y, A. Luck would have only 1 more year of keeper eligibility remaining.</p>
+    <p>The years a player is kept do not need to be consecutive. For example, if Cooper Kupp was kept in 2019, not kept in 2020, and then kept again in 2021, it would still count as two years kept.</p>
+    <p>Players undrafted in the previous year’s draft and players drafted in rounds 10 and later will be counted as a 9th round keeper if kept.</p>
+    
+    
+    
+    
+    
+    
 
     <h2 class="sectionHeading" bind:this={fifteen}>#194 Award</h2>
     <p>Payout given to the owner with the highest single week scoring total over the course of the season.</p>
 
-    <h2 class="sectionHeading" bind:this={sixteen}>Comissioner's Cup</h2>
+    <h2 class="sectionHeading" bind:this={sixteen}>Commissioner's Cup</h2>
     <p>The commissioner’s cup is a season long tournament replacing the Team of the Week that rewards the highest scoring teams each week. </p>
 <p>The top 5 highest scoring teams each week receive points towards the cup. At the end of the regular season the teams with the highest number of points get paid out.</p>
 <p>Ties are broken by the most Points scored.</p>
@@ -315,6 +319,22 @@
         <td>5</td>
     </tr>
 </table>
+<h2 class="sectionHeading" bind:this={seventeen}>Appendix</h2>
+
+
+
+<p>Commissioner Veto escalated to league vote example: </p>
+<ul>
+    <li>Owner X sends an open trade to another league member and forgets about it.</li>
+    <li>During the pending period, the player Owner X wanted to trade for announces their retirement.</li>
+    <li>The receiving owner quickly accepts the trade.</li>
+    <li>The Rules Committee (RC) rules that a trade is a trade, and Owner X must abide by it.</li>
+    <li>The majority (at least 6/10) of the league believes the trade should be reversed due to the circumstances.</li>
+    <li>The Commissioner vetoes the RC's ruling and initiates a league-wide vote to return Owner X’s player to his team.</li>
+    <li>The league votes in favor of the reversal.</li>
+    <li>The ruling is overturned, and Owner X gets his player back.</li>
+</ul>
+
 
 </div>
 
@@ -395,6 +415,6 @@
     }
 
     p {
-        color: #777;
+        color: #212121;
     }
 </style>

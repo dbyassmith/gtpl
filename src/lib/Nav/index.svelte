@@ -41,8 +41,8 @@
 		background-color: var(--fff);
 		position: relative;
 		z-index: 2;
-		border-bottom: 1px solid #00316b;
-		box-shadow: 0 0 8px 0 #00316b;
+		/* border-bottom: 1px solid #00316b; */
+		/* box-shadow: 0 0 8px 0 #333333; */
 	}
 
 	#logo {
@@ -82,7 +82,7 @@
 </style>
 
 <nav>
-	<a href="/"><img id="logo" alt="league logo" src="/badge.png" /></a>
+	<a href="/"><img id="logo" alt="league logo" src="/badge2024.jpg" /></a>
 
 	<div class="container">
 		<IconButton

@@ -72,5 +72,15 @@ export const tabs = [
                 dest: `https://sleeper.app/leagues/${leagueID}`,
             },
         ]
+    },
+    {
+        icon: 'military_tech',
+        label: 'Lore',
+        dest: '/lore'
+    },
+    {
+        icon: 'groups_2',
+        label: 'FTC',
+        dest: '/ftc'
     }
 ];

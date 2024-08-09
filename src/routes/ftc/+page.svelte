@@ -1,0 +1,8 @@
+<div id="main">
+  <h1>Join the FTC</h1>
+  <p>In the dynamic world of fantasy football, where digital gridirons and virtual playbooks reign supreme, one organization has emerged as the beacon of fairness, responsiveness, and imagination. Meet the Fantasy Trade Commission, a confederation of astute fantasy football managers who have redefined the art of the trade. Established within the hallowed halls of the Georgia Tech Premier League, the Fantasy Trade Commission, or FTC, has etched its name in the annals of fantasy sports history.</p>
+
+<p>For years, the FTC has been a trusted haven for passionate fantasy football enthusiasts from all walks of life, spanning diverse sensibilities and backgrounds. Its members share a common passion for the game, united by their unwavering commitment to executing trades that epitomize sportsmanship and strategic brilliance. In the ever-evolving landscape of fantasy football, where player swaps can make or break a season, the FTC stands as a paragon of integrity.</p>
+
+<p>What sets the FTC apart is their renowned "FTC Approved" trade designation, a badge of honor earned when two FTC members collaborate on a trade within the league. This prestigious distinction signifies not only the quality of the trade but also the dedication of those involved. FTC Approved trades are celebrated as the pinnacle of fantasy football craftsmanship, embodying the spirit of fairness and camaraderie that defines the organization.</p>
+</div>
