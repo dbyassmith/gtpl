@@ -26,6 +26,7 @@
 
 <div class="constitution">
     <h1 class="noUnderscore">GEORGIA TECH PREMIER LEAGUE CONSTITUTION</h1>
+    
 
     <h2 class="noUnderscore">TABLE OF CONTENTS</h2>
 
@@ -107,7 +108,7 @@
     <p>The Rules Committee will refer to the typical standards of the Sleeper Fantasy Football app for situations not covered in the constitution. Please visit <a href="https://support.sleeper.com/en/collections/410900-fantasy-football" target="_blank">Sleeper Fantasy Football support</a> for reference materials.</p>
 
     <p><span style="font-weight: bold">Replacement of Rules Committee Members:</span></p>
-    <p>If an RC member is removed, a replacement will be selected through a league-wide vote.</p>
+    <p>If a RC member is removed, a replacement will be selected through a league-wide vote.</p>
 
 
     <h2 class="sectionHeading" bind:this={three}>Draft</h2>
@@ -191,7 +192,7 @@
         <li>Most points scored during the regular season</li>
         <li>Head to head</li>
         <li>Points scored during head to head matches</li>
-        <li>Commissioner and Counsel Executive Decision</li>
+        <li>Commissioner and Rules Committee Executive Decision</li>
     </ol>
 
     <h2 class="sectionHeading" bind:this={ten}>Playoff Format</h2>
@@ -274,10 +275,10 @@
     <p>Keepers must be announced by the date assigned by the Commissioner. If the deadline passes without Team A announcing a keeper, Team A will not have a keeper. A player's 'keeper rights' travel with them in a trade. They are bound to the player.</p>
     
     <p>Keeper Cost:</p>
-    <p>The kept player for a team will count for the team’s draft spot in the round preceding where the player was drafted the prior year. Ex. if Team X drafted A. Luck in the 6th round of the 2013 draft and would like to keep him, A. Luck will be Team X’s 5th round pick of the 2014 draft.</p>
+    <p>The kept player for a team will count for the team's draft spot in the round preceding where the player was drafted the prior year. Ex. if Team X drafted A. Luck in the 6th round of the 2013 draft and would like to keep him, A. Luck will be Team X's 5th round pick of the 2014 draft.</p>
     <p>Players can be kept for a maximum of 2 years, regardless of owner, or until they are a 3rd round pick. Ex., if A. Luck was kept by Owner X and then traded that year to Owner Y, A. Luck would have only 1 more year of keeper eligibility remaining.</p>
     <p>The years a player is kept do not need to be consecutive. For example, if Cooper Kupp was kept in 2019, not kept in 2020, and then kept again in 2021, it would still count as two years kept.</p>
-    <p>Players undrafted in the previous year’s draft and players drafted in rounds 10 and later will be counted as a 9th round keeper if kept.</p>
+    <p>Players undrafted in the previous year's draft and players drafted in rounds 10 and later will be counted as a 9th round keeper if kept.</p>
     
     
     
@@ -289,7 +290,7 @@
     <p>Payout given to the owner with the highest single week scoring total over the course of the season.</p>
 
     <h2 class="sectionHeading" bind:this={sixteen}>Commissioner's Cup</h2>
-    <p>The commissioner’s cup is a season long tournament replacing the Team of the Week that rewards the highest scoring teams each week. </p>
+    <p>The commissioner's cup is a season long tournament replacing the Team of the Week that rewards the highest scoring teams each week. </p>
 <p>The top 5 highest scoring teams each week receive points towards the cup. At the end of the regular season the teams with the highest number of points get paid out.</p>
 <p>Ties are broken by the most Points scored.</p>
 <h3>Weekly Scoring</h3>
@@ -334,7 +335,7 @@
     <li>The league votes in favor of the reversal.</li>
     <li>The ruling is overturned, and Owner X gets his player back.</li>
 </ul>
-
+<h5 style="text-align:center; margin-top:100px">Last updated August 8th, 2024</h5>
 
 </div>
 

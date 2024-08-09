@@ -73,14 +73,14 @@ export const tabs = [
             },
         ]
     },
-    {
-        icon: 'military_tech',
-        label: 'Lore',
-        dest: '/lore'
-    },
-    {
-        icon: 'groups_2',
-        label: 'FTC',
-        dest: '/ftc'
-    }
+    // {
+    //     icon: 'military_tech',
+    //     label: 'Lore',
+    //     dest: '/lore'
+    // },
+    // {
+    //     icon: 'groups_2',
+    //     label: 'FTC',
+    //     dest: '/ftc'
+    // }
 ];
