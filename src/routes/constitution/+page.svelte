@@ -115,7 +115,7 @@
 
     <p>
         The draft will be for 16 rounds held on Sleeper fantasy football or
-        liver in person
+        live in person
     </p>
     <p>
         Each team is required to draft a full starting lineup. At minimum, the
@@ -123,7 +123,7 @@
         | 1 D/ST | 1 K
     </p>
     <p>
-        During a sleeper draft each team will be allotted 75 seconds per draft
+        During a sleeper draft each team will be allotted 2 minutes per draft
         pick in rounds 1-3; 60 seconds rounds 4-6. Subsequent rounds will be
         capped at 45 seconds. Failure to pick in a timely manner will result in
         a fine
@@ -202,10 +202,14 @@
         to Semi-Finals
     </p>
     <p>
-        Ties in the playoffs will be broken by removing the kicker from the
-        point totals. If teams are still tied, the higher seed advances (Seed
-        one would advance over seed two).
+        Ties in the playoffs will be broken by the followinig tiebreakers in order:
     </p>
+    <ol>
+        <li>Removing the kickers</li>
+        <li>Removing the defense</li>
+        <li>Removing the tight end</li>
+        <li>Higher seed</li>
+    </ol>
 
     <h3>Wildcard Round (Week 15)</h3>
     <p>Seed 3 plays Seed 6</p>
@@ -335,7 +339,7 @@
     <li>The league votes in favor of the reversal.</li>
     <li>The ruling is overturned, and Owner X gets his player back.</li>
 </ul>
-<h5 style="text-align:center; margin-top:100px">Last updated August 8th, 2024</h5>
+<h5 style="text-align:center; margin-top:100px">Last updated August 26th, 2024</h5>
 
 </div>
 
