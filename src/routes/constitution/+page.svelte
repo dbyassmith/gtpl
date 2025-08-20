@@ -245,29 +245,31 @@
     <li>Commissioner's Cup Allocation: $500</li>
 
     <table>
-        <tr>
-            <th colspan="2">Commissioner's Cup Payout</th>
-        </tr>
-        <tr>
-            <td>1st</td>
-            <td>$200</td>
-        </tr>
-        <tr>
-            <td>2nd</td>
-            <td>$125</td>
-        </tr>
-        <tr>
-            <td>3rd</td>
-            <td>$90</td>
-        </tr>
-        <tr>
-            <td>4th</td>
-            <td>$60</td>
-        </tr>
-        <tr>
-            <td>5th</td>
-            <td>$25</td>
-        </tr>
+        <tbody>
+            <tr>
+                <th colspan="2">Commissioner's Cup Payout</th>
+            </tr>
+            <tr>
+                <td>1st</td>
+                <td>$200</td>
+            </tr>
+            <tr>
+                <td>2nd</td>
+                <td>$125</td>
+            </tr>
+            <tr>
+                <td>3rd</td>
+                <td>$90</td>
+            </tr>
+            <tr>
+                <td>4th</td>
+                <td>$60</td>
+            </tr>
+            <tr>
+                <td>5th</td>
+                <td>$25</td>
+            </tr>
+        </tbody>
     </table>
 
     <p>#194 Award: $50</p>
@@ -299,30 +301,32 @@
 <p>Ties are broken by the most Points scored.</p>
 <h3>Weekly Scoring</h3>
 <table>
-    <tr>
-        <th>Rank</th>
-        <th>Score</th>
-    </tr>
-    <tr>
-        <td>1st</td>
-        <td>12</td>
-    </tr>
-    <tr>
-        <td>2nd</td>
-        <td>9</td>
-    </tr>
-    <tr>
-        <td>2nd</td>
-        <td>7</td>
-    </tr>
-    <tr>
-        <td>4th</td>
-        <td>6</td>
-    </tr>
-    <tr>
-        <td>5th</td>
-        <td>5</td>
-    </tr>
+    <tbody>
+        <tr>
+            <th>Rank</th>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>5</td>
+        </tr>
+    </tbody>
 </table>
 <h2 class="sectionHeading" bind:this={seventeen}>Appendix</h2>
 

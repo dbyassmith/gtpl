@@ -5,26 +5,31 @@ export const tabs = [
         icon: 'home',
         label: 'Home',
         dest: '/',
+        key: 'home',
     },
     {
         icon: 'sports',
         label: 'Matchups',
         dest: '/matchups',
+        key: 'matchups',
     },
     {
         icon: 'swap_horiz',
         label: 'Trades & Waivers',
         dest: '/transactions',
+        key: 'transactions',
     },
     {
         icon: 'article',
         label: 'Blog',
         dest: '/blog',
+        key: 'blog',
     },
     {
         icon: 'view_comfy',
         label: 'League Info',
         nest: true,
+        key: 'league_info',
         children: [
             {
                 icon: 'storage',
@@ -72,15 +77,5 @@ export const tabs = [
                 dest: `https://sleeper.app/leagues/${leagueID}`,
             },
         ]
-    },
-    // {
-    //     icon: 'military_tech',
-    //     label: 'Lore',
-    //     dest: '/lore'
-    // },
-    // {
-    //     icon: 'groups_2',
-    //     label: 'FTC',
-    //     dest: '/ftc'
-    // }
+    }
 ];
