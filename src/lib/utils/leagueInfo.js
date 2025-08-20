@@ -1,5 +1,5 @@
 /*   STEP 1   */
-export const leagueID = "968968619327561728"; // your league ID
+export const leagueID = "1239371001439977472"; // your league ID
 export const leagueName = "Georgia Tech Premier League"; // your league name
 export const dues = 200; // (optional) used in template constitution page
 export const dynasty = false; // true for dynasty leagues, false for redraft and keeper
