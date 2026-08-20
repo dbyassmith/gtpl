@@ -134,14 +134,19 @@
     </p>
 
     <h2 class="sectionHeading" bind:this={four}>Scoring</h2>
-    <p>All agreed to scoring rules are directly inputted into the Sleeper Fantasy Football app.
+    <p>
+        All agreed to scoring rules are directly inputted into the Sleeper Fantasy Football app.
     </p>
-    <p>Please reference all scoring points breakdown in the Georgia Tech Premier League settings in the Sleeper Fantasy Football app. 
+    <p>
+        For the 2026 season, D/ST scoring will use the modified, Sleeper-compatible You Deserve Better (YDB) configuration set forth in the 2026 Rules Committee Amendments. This configuration adds direct scoring for tackles for loss, passes defended, three-and-outs, fourth-down stops, forced fumbles, and other high-impact plays, while applying the revised points-allowed and yards-allowed adjustments.
+    </p>
+    <p>
+        Please reference the Georgia Tech Premier League settings in Sleeper for the complete scoring breakdown.
     </p>
 
     <h2 class="sectionHeading" bind:this={five}>Roster Size</h2>
     <p>
-        Each team’s roster will consist of 16 spots. There are 9 starters and a total of 7 bench spots.
+        Beginning with the 2026 season, each team's active roster will consist of 15 spots: 9 starters and 6 bench spots.
     </p>
     <p>
         There is also 1 IR spot available for players designated as IR (Injured Reserve) or PUP (Physically Unable to Perform) in the Sleeper Fantasy Football app. Players with Out, Suspended, Doubtful, NA, or DNR/holdout status designations are not eligible for the IR spot.
@@ -343,7 +348,7 @@
     <li>The league votes in favor of the reversal.</li>
     <li>The ruling is overturned, and Owner X gets his player back.</li>
 </ul>
-<h5 style="text-align:center; margin-top:100px">Last updated August 26th, 2024</h5>
+<h5 style="text-align:center; margin-top:100px">Last updated August 19th, 2026</h5>
 
 </div>
 
