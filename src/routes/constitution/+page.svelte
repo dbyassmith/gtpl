@@ -138,7 +138,7 @@
         All agreed to scoring rules are directly inputted into the Sleeper Fantasy Football app.
     </p>
     <p>
-        For the 2026 season, D/ST scoring will use the modified, Sleeper-compatible You Deserve Better (YDB) configuration set forth in the 2026 Rules Committee Amendments. This configuration adds direct scoring for tackles for loss, passes defended, three-and-outs, fourth-down stops, forced fumbles, and other high-impact plays, while applying the revised points-allowed and yards-allowed adjustments.
+        For the 2026 season, D/ST scoring will use the modified, Sleeper-compatible You Deserve Better (YDB) configuration set forth in Appendix B. This configuration adds direct scoring for tackles for loss, passes defended, three-and-outs, fourth-down stops, forced fumbles, and other high-impact plays, while applying the revised points-allowed and yards-allowed adjustments.
     </p>
     <p>
         Please reference the Georgia Tech Premier League settings in Sleeper for the complete scoring breakdown.
@@ -335,9 +335,7 @@
 </table>
 <h2 class="sectionHeading" bind:this={seventeen}>Appendix</h2>
 
-
-
-<p>Commissioner Veto escalated to league vote example: </p>
+<h3 class="subSectionHeading">Appendix A: Commissioner Veto Escalated to League Vote Example</h3>
 <ul>
     <li>Owner X sends an open trade to another league member and forgets about it.</li>
     <li>During the pending period, the player Owner X wanted to trade for announces their retirement.</li>
@@ -348,6 +346,70 @@
     <li>The league votes in favor of the reversal.</li>
     <li>The ruling is overturned, and Owner X gets his player back.</li>
 </ul>
+
+<h3 class="subSectionHeading">Appendix B: 2026 D/ST Scoring Configuration</h3>
+<p>
+    These settings use a modified, Sleeper-compatible version of the You Deserve Better (YDB) system. The Georgia Tech Premier League settings in Sleeper remain the authority for the complete scoring breakdown.
+</p>
+
+<h4 class="appendixHeading">Major D/ST Scoring Changes</h4>
+<ul>
+    <li><strong>No automatic 10-point opening bonus.</strong> The points-allowed component begins with a one-point offset that is gradually consumed as the opponent scores.</li>
+    <li><strong>Tackles for loss:</strong> 0.5 points.</li>
+    <li><strong>Passes defended:</strong> 0.25 points.</li>
+    <li><strong>Three-and-outs:</strong> 0.25 points.</li>
+    <li><strong>Fourth-down stops:</strong> 0.5 points.</li>
+    <li><strong>Safeties:</strong> 4 points.</li>
+    <li><strong>Blocked kicks:</strong> 3 points.</li>
+    <li><strong>Forced fumbles and recoveries:</strong> 1 point for a forced fumble and 1 point for a fumble recovery.</li>
+    <li><strong>Core scoring:</strong> Sacks remain worth 1 point, interceptions remain worth 2 points, and defensive touchdowns remain worth 6 points.</li>
+    <li><strong>Yards allowed:</strong> No adjustment through 349 yards, with increasingly negative adjustments beginning at 350 yards.</li>
+</ul>
+
+<table class="scoringTable">
+    <caption>Points-Allowed Settings</caption>
+    <thead>
+        <tr>
+            <th>Sleeper setting</th>
+            <th>2026 value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Points allowed: 0</td><td>+1</td></tr>
+        <tr><td>Points allowed: 1–6</td><td>+1</td></tr>
+        <tr><td>Points allowed: 7–13</td><td>+1</td></tr>
+        <tr><td>Points allowed: 14–20</td><td>0</td></tr>
+        <tr><td>Points allowed: 21–27</td><td>−1</td></tr>
+        <tr><td>Points allowed: 28–34</td><td>−2</td></tr>
+        <tr><td>Points allowed: 35+</td><td>−3</td></tr>
+        <tr><td>Points per point allowed</td><td>−0.2</td></tr>
+    </tbody>
+</table>
+<p>
+    The bucket value and the per-point deduction are applied together. For example, allowing 20 points produces a 0-point bucket adjustment and a −4-point per-point adjustment, for a total points-allowed adjustment of −4.
+</p>
+
+<table class="scoringTable">
+    <caption>Yards-Allowed Settings</caption>
+    <thead>
+        <tr>
+            <th>Sleeper setting</th>
+            <th>2026 value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>0–99 total yards allowed</td><td>0</td></tr>
+        <tr><td>100–199 total yards allowed</td><td>0</td></tr>
+        <tr><td>200–299 total yards allowed</td><td>0</td></tr>
+        <tr><td>300–349 total yards allowed</td><td>0</td></tr>
+        <tr><td>350–399 total yards allowed</td><td>−1</td></tr>
+        <tr><td>400–449 total yards allowed</td><td>−2</td></tr>
+        <tr><td>450–499 total yards allowed</td><td>−3</td></tr>
+        <tr><td>500–549 total yards allowed</td><td>−4</td></tr>
+        <tr><td>550+ total yards allowed</td><td>−5</td></tr>
+    </tbody>
+</table>
+
 <h5 style="text-align:center; margin-top:100px">Last updated August 19th, 2026</h5>
 
 </div>
@@ -402,6 +464,36 @@
 
     .subSectionHeading {
         margin: 1.5em 0 1.5em;
+    }
+
+    .appendixHeading {
+        margin: 2em 0 1em;
+    }
+
+    .scoringTable {
+        width: 100%;
+        margin: 2em 0 1em;
+        border-collapse: collapse;
+    }
+
+    .scoringTable caption {
+        margin-bottom: 0.75em;
+        font-size: 1.1em;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .scoringTable th,
+    .scoringTable td {
+        padding: 0.6em 0.75em;
+        border: 1px solid currentColor;
+        text-align: left;
+    }
+
+    .scoringTable th:last-child,
+    .scoringTable td:last-child {
+        width: 7em;
+        text-align: center;
     }
 
     .underscore {
