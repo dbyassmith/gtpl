@@ -114,7 +114,7 @@
     <h2 class="sectionHeading" bind:this={three}>Draft</h2>
 
     <p>
-        The draft will be for 16 rounds held on Sleeper fantasy football or
+        The draft will be for 15 rounds held on Sleeper fantasy football or
         live in person
     </p>
     <p>
