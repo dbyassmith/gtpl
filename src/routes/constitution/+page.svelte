@@ -102,7 +102,7 @@
     <p><span style="font-weight: bold">Removal of the Commissioner:</span></p>
     <p>The removal of the Commissioner requires a unanimous decision from the Rules Committee, which must recommend the Commissioner's removal to the league. The final decision is then made by a league-wide vote, in which the Commissioner also gets a vote.</p>
 
-    <p><span style="font-weight: bold">The Rules Committee:</span> Darren Domaracki, Joe Kummer, Anil Nataraj</p>
+    <p><span style="font-weight: bold">The Rules Committee:</span> Darren Domaracki, Joe Kummer, Austin Barry</p>
     <p>The Rules Committee consists of three members elected by a league-wide vote each offseason, with no term limits. This committee ensures that all league rules are adhered to and makes all rule-related decisions. The Commissioner votes only in the case of a tiebreaker due to a recusal.</p>
     <p>At the end of each season, The Rules Committee will address issues, propose improvements, and present these changes as a revised constitution to The League for feedback. They will submit a final revision to the league for the following season before concluding their term. The final draft of the constitution is able to be vetoed at the commissioner’s discretion.</p>
     <p>The Rules Committee will refer to the typical standards of the Sleeper Fantasy Football app for situations not covered in the constitution. Please visit <a href="https://support.sleeper.com/en/collections/410900-fantasy-football" target="_blank">Sleeper Fantasy Football support</a> for reference materials.</p>
