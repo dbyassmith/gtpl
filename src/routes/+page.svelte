@@ -1,231 +1,154 @@
 <script>
-	import LinearProgress from '@smui/linear-progress';
-	import { getNflState, leagueName, getAwards, getLeagueTeamManagers, homepageText, managers, gotoManager, enableBlog, waitForAll } from '$lib/utils/helper';
-	import { Transactions, PowerRankings, HomePost} from '$lib/components';
-	import { getAvatarFromTeamManagers, getTeamFromTeamManagers } from '$lib/utils/helperFunctions/universalFunctions';
+	const target = new Date('2026-08-27T13:00:00-04:00').getTime();
+	const units = [
+		{ key: 'days', label: 'Days' },
+		{ key: 'hours', label: 'Hours' },
+		{ key: 'minutes', label: 'Minutes' },
+		{ key: 'seconds', label: 'Seconds' }
+	];
 
-    const nflState = getNflState();
-    const podiumsData = getAwards();
-    const leagueTeamManagersData = getLeagueTeamManagers();
+	let remaining = $state(target - Date.now());
+
+	const countdown = $derived.by(() => {
+		const distance = Math.max(0, remaining);
+
+		return {
+			days: Math.floor(distance / 86_400_000),
+			hours: Math.floor((distance / 3_600_000) % 24),
+			minutes: Math.floor((distance / 60_000) % 60),
+			seconds: Math.floor((distance / 1_000) % 60)
+		};
+	});
+
+	$effect(() => {
+		const update = () => {
+			remaining = target - Date.now();
+		};
+
+		update();
+		const timer = window.setInterval(() => {
+			update();
+		}, 1_000);
+
+		return () => window.clearInterval(timer);
+	});
 </script>
 
+<svelte:head>
+	<title>GTPL</title>
+</svelte:head>
+
+<section class="countdown-page" aria-labelledby="countdown-title">
+	<h1 id="countdown-title" class="sr-only">Countdown to August 27, 2026 at 1:00 PM Eastern</h1>
+
+	<div class="countdown-lockup">
+		<img
+			class="league-logo"
+			data-logo-hover-trigger
+			src="/gtpl-logo.png"
+			alt="Georgia Tech Premier League"
+		/>
+
+		<div class="countdown" role="timer" aria-label="Countdown to August 27, 2026 at 1:00 PM Eastern">
+			{#each units as unit, index}
+				<span class="countdown-value">
+					<span class="sr-only">{unit.label}: </span>{String(countdown[unit.key]).padStart(2, '0')}
+				</span>
+				{#if index < units.length - 1}
+					<span class="separator" aria-hidden="true">:</span>
+				{/if}
+			{/each}
+		</div>
+	</div>
+</section>
+
 <style>
-    #home {
-        display: flex;
-        flex-wrap: nowrap;
-        position: relative;
-        overflow-y: hidden;
-        z-index: 1;
-    }
-
-    #main {
-        flex-grow: 1;
-        min-width: 320px;
-        margin: 0 auto;
-        padding: 60px 0;
-    }
-
-    .text {
-        padding: 0 30px;
-        max-width: 620px;
-        margin: 0 auto;
-    }
-
-    .leagueData {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        min-width: 470px;
-        max-width: 470px;
-        min-height: 100%;
-		background-color: var(--ebebeb);
-        border-left: var(--eee);
-		box-shadow: inset 8px 0px 6px -6px rgb(0 0 0 / 24%);
-    }
-
-    @media (max-width: 950px) {
-        .leagueData {
-            max-width: 100%;
-            min-width: 100%;
-            width: 100%;
-		    box-shadow: none;
-        }
-        #home {
-            flex-wrap: wrap;
-        }
-    }
-
-    .transactions {
-        display: block;
-        width: 95%;
-        margin: 10px auto;
-    }
-
-    .center {
-        text-align: center;
-    }
-
-    h6 {
-        text-align: center;
-    }
-
-    .homeBanner {
-        background-color: var(--blueOne);
-        color: #fff;
-        padding: 0.5em 0;
-        font-weight: 500;
-        font-size: 1.5em;
-    }
-
-    /* champ styling */
-    #currentChamp {
-        padding: 25px 0;
-		background-color: var(--f3f3f3);
-        box-shadow: 5px 0 8px var(--champShadow);
-        border-left: 1px solid var(--ddd);
-    }
-
-    #champ {
-        position: relative;
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
-        cursor: pointer;
-    }
-
-    .first {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 80px;
-        height: 80px;
-        border-radius: 100%;
-        border: 1px solid #ccc;
-        left: 50%;
-        top: 43%;
-    }
-
-    .laurel {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 135px;
-        height: auto;
-        left: 50%;
-        top: 50%;
-    }
-
-    h4 {
-        text-align: center;
-        font-size: 1.8em;
-        margin: 10px;
-        font-style: italic;
-    }
-
-    .label {
-        display: table;
-        text-align: center;
-        line-height: 1.1em;
-        font-size: 1.7em;
-        margin: 6px auto 10px;
-        cursor: pointer;
-    }
-    
-	:global(.curOwner) {
-		font-size: 0.75em;
-		color: #bbb;
-		font-style: italic;
+	.countdown-page {
+		display: grid;
+		min-height: 100svh;
+		place-items: center;
+		padding: 118px clamp(18px, 5vw, 80px) 70px;
 	}
 
-    .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 20px;
-}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+	.countdown-lockup {
+		display: flex;
+		width: min(1120px, 100%);
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.league-logo {
+		display: block;
+		width: clamp(88px, 8vw, 118px);
+		height: auto;
+		margin-bottom: clamp(30px, 5vh, 54px);
+	}
+
+	.countdown {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		white-space: nowrap;
+	}
+
+	.countdown-value {
+		font-size: clamp(54px, 10vw, 148px);
+		font-weight: 300;
+		font-variant-numeric: tabular-nums;
+		letter-spacing: -0.075em;
+		line-height: 0.92;
+	}
+
+	.separator {
+		margin: 0 clamp(5px, 1.5vw, 22px);
+		color: #777;
+		font-size: clamp(48px, 8.5vw, 126px);
+		font-weight: 200;
+		line-height: 0.8;
+		transform: translateY(-0.08em);
+	}
+
+	@media (max-width: 640px) {
+		.countdown-page {
+			padding: 104px 16px 48px;
+		}
+
+		.league-logo {
+			width: clamp(76px, 24vw, 96px);
+			margin-bottom: 38px;
+		}
+
+		.countdown-value {
+			font-size: clamp(40px, 12.7vw, 65px);
+		}
+
+		.separator {
+			margin: 0 3px;
+			font-size: clamp(34px, 10vw, 52px);
+		}
+	}
+
+	@media (max-height: 700px) and (min-width: 641px) {
+		.countdown-page {
+			padding-top: 94px;
+		}
+
+		.league-logo {
+			width: 86px;
+			margin-bottom: 28px;
+		}
+	}
 </style>
-
-<div id="home">
-    <div id="main">
-        <div class="text">
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XmqIb2n2BZ8?si=Un9VAfNZV0u9Lcvl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TOx-8g7dH2Q?si=BUluOZzc9zPMzdPJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/j_TzeZ5XIn8?si=8c8ga8AWs6hx43KJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Pyq9CGwSXx4?si=YJX-3g5RYnyKIMel" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Oda0W7zILXc?si=-1_JUOaEB25KldA1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/20OaIxCrTXQ?si=Dn-ww3wASEsUWkoJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <!-- homepageText contains the intro text for your league, this gets edited in /src/lib/utils/leagueInfo.js -->
-            {@html homepageText }
-            <!-- Most recent Blog Post (if enabled) -->
-            {#if enableBlog}
-                <HomePost />
-            {/if}
-        </div>
-        <PowerRankings />
-    </div>
-    
-    <div class="leagueData">
-        <div class="homeBanner">
-            {#await nflState}
-                <div class="center">Retrieving NFL state...</div>
-                <LinearProgress indeterminate />
-            {:then nflStateData}
-                <div class="center">NFL {nflStateData.season} 
-                    {#if nflStateData.season_type == 'pre'}
-                        Preseason
-                    {:else if nflStateData.season_type == 'post'}
-                        Postseason
-                    {:else}
-                        Season - {nflStateData.week > 0 ? `Week ${nflStateData.week}` : "Preseason"}
-                    {/if}
-                </div>
-            {:catch error}
-                <div class="center">Something went wrong: {error.message}</div>
-            {/await}
-        </div>
-
-        <div id="currentChamp">
-            {#await waitForAll(podiumsData, leagueTeamManagersData)}
-                <p class="center">Retrieving awards...</p>
-                <LinearProgress indeterminate />
-            {:then [podiums, leagueTeamManagers]}
-                {#if podiums[0]}
-                    <h4>{podiums[0].year} Fantasy Champ</h4>
-                    <div id="champ" onclick={() => {if(managers.length) gotoManager({year: podiums[0].year, leagueTeamManagers, rosterID: parseInt(podiums[0].champion)})}} >
-                        <img src="{getAvatarFromTeamManagers(leagueTeamManagers, podiums[0].champion, podiums[0].year)}" class="first" alt="champion" />
-                        <img src="/laurel.png" class="laurel" alt="laurel" />
-                    </div>
-                    <span class="label" onclick={() => gotoManager({year: podiums[0].year, leagueTeamManagers, rosterID: parseInt(podiums[0].champion)})} >{getTeamFromTeamManagers(leagueTeamManagers, podiums[0].champion, podiums[0].year).name}</span>
-                {:else}
-                    <p class="center">No former champs.</p>
-                {/if}
-            {:catch error}
-                <p class="center">Something went wrong: {error.message}</p>
-            {/await}
-        </div>
-
-        <div class="transactions" >
-            <Transactions />
-        </div>
-    </div>
-</div>

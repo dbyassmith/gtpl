@@ -1,39 +1,45 @@
+<script>
+	import { page } from '$app/state';
+</script>
+
+<svelte:head>
+	<title>{page.status} · GTPL</title>
+</svelte:head>
+
+<section class="error-page">
+	<p class="status">{page.status}</p>
+	<h1>{page.status === 404 ? 'Page not found.' : 'Something went wrong.'}</h1>
+	<a href="/">Return home</a>
+</section>
+
 <style>
-    .main {
-        position: relative;
-        z-index: 1;
-    }
+	.error-page {
+		display: flex;
+		min-height: 100svh;
+		align-items: center;
+		justify-content: center;
+		padding: 120px 24px 60px;
+		text-align: center;
+		flex-direction: column;
+	}
 
-    h4, h5 {
-        text-align: center;
-    }
+	.status {
+		margin: 0 0 18px;
+		color: #777;
+		font-size: 14px;
+		letter-spacing: 0.18em;
+	}
 
-    .footballHolder {
-        text-align: center;
-        padding: 2em 0;
-    }
+	h1 {
+		margin: 0;
+		font-size: clamp(40px, 7vw, 78px);
+		font-weight: 400;
+		letter-spacing: -0.05em;
+	}
 
-    h4 {
-        color: var(--blueOne);
-        font-weight: 700;
-        margin: 3em 0 1em;
-    }
-
-    .football {
-        width: 80%;
-        max-width: 300px;
-        height: auto;
-    }
+	a {
+		margin-top: 32px;
+		color: #c7c7c4;
+		text-underline-offset: 5px;
+	}
 </style>
-
-<div class="main">
-    <h4>
-        Hut, Hut, Blue 404!
-    </h4>
-    <div class='footballHolder'>
-        <img class='football' src='/deflated-football.png' alt='deflated football' />
-    </div>
-    <h5>
-        Nothing Here... Try Another Page!
-    </h5>
-</div>

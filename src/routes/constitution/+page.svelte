@@ -1,90 +1,37 @@
-<script>
-    import { dues } from "$lib/utils/helper";
-    let one,
-        two,
-        three,
-        four,
-        five,
-        six,
-        seven,
-        eight,
-        nine,
-        ten,
-        eleven,
-        twelve,
-        thirteen,
-        fourteen,
-        fifteen,
-        sixteen,
-        seventeen;
+<svelte:head>
+    <title>Constitution · GTPL</title>
+</svelte:head>
 
-    const goToSection = (section) => {
-        const top = section.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({ left: 0, top, behavior: "smooth" });
-    };
-</script>
+<article class="constitution">
+    <header class="constitution-header">
+        <h1>GTPL Constitution</h1>
+        <p class="last-amended">Last amended August 19, 2026</p>
+    </header>
 
-<div class="constitution">
-    <h1 class="noUnderscore">GEORGIA TECH PREMIER LEAGUE CONSTITUTION</h1>
-    
+    <nav class="contents" aria-labelledby="contents-heading">
+        <h2 id="contents-heading">Contents</h2>
+        <ol>
+            <li><a href="#purpose">Purpose</a></li>
+            <li><a href="#governing-body">Governing Body</a></li>
+            <li><a href="#draft">Draft</a></li>
+            <li><a href="#scoring">Scoring</a></li>
+            <li><a href="#roster-size">Roster Size</a></li>
+            <li><a href="#starting-lineups">Starting Lineups</a></li>
+            <li><a href="#trades">Trades</a></li>
+            <li><a href="#waiver-wire">Waiver Wire</a></li>
+            <li><a href="#conference-format">Conference Format & Seeding Tiebreakers</a></li>
+            <li><a href="#playoff-format">Playoff Format</a></li>
+            <li><a href="#buy-in">Buy-In & Escrow</a></li>
+            <li><a href="#fines">Fines & Penalties</a></li>
+            <li><a href="#payout">Payout</a></li>
+            <li><a href="#keepers">Keepers</a></li>
+            <li><a href="#194-award">#194 Award</a></li>
+            <li><a href="#commissioners-cup">Commissioner's Cup</a></li>
+            <li><a href="#appendix">Appendix</a></li>
+        </ol>
+    </nav>
 
-    <h2 class="noUnderscore">TABLE OF CONTENTS</h2>
-
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(one)}>
-        Purpose
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(two)}>
-        Governing Body
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(three)}>
-        Draft
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(four)}>
-        Scoring
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(five)}>
-        Roster Size
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(six)}>
-        Starting Lineups
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(seven)}>
-        Trades
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(eight)}>
-        Waiver Wire
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(nine)}>
-        Conference Format & Seeding Tiebreakers
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(ten)}>
-        Playoff Format
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(eleven)}>
-        Buy-In & Escrow
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(twelve)}>
-        Fines & Penalties
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(thirteen)}>
-        Payout
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(fourteen)}>
-        Keepers
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(fifteen)}>
-        #194 Award
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(sixteen)}>
-        Comissioner's Cup
-    </h3>
-    <h3 class="noUnderscore clickable" on:click={() => goToSection(seventeen)}>
-        Appendix
-    </h3>
-
-    <hr />
-
-    <h2 class="sectionHeading" bind:this={one}>Purpose</h2>
+    <h2 class="sectionHeading" id="purpose">Purpose</h2>
     <p>
         This League was founded on the Hefner 3rd floor to play Fantasy Football
         at a competitive level, but mostly to have FUN and lots of ACTION. Every
@@ -94,7 +41,7 @@
         illegal activity.
     </p>
 
-    <h2 class="sectionHeading" bind:this={two}>Governing Body</h2>
+    <h2 class="sectionHeading" id="governing-body">Governing Body</h2>
     <p><span style="font-weight: bold">Commissioner:</span> David Byas-Smith</p>
     <p>The Commissioner advocates for the entire league and manages league milestones and activities. The Commissioner is responsible for collecting and distributing money but may delegate this specific responsibility. The Commissioner has the authority to veto any ruling from the Rules Committee and can escalate the issue to a league-wide majority vote on a final decision. If the vote fails, the original ruling stands (see appendix for example). If the Commissioner has recused himself, any veto requires a unanimous decision from the remaining Rules Committee members. If at least one Rules Committee member is involved in the decision, the final decision defaults to the unanimous decision of the remaining uninvolved Rules Committee member(s).</p>
     <p>The Commissioner has the authority to dismiss any Rules Committee member for just cause, such as non-responsiveness. This power will be exercised cautiously.</p>
@@ -111,7 +58,7 @@
     <p>If a RC member is removed, a replacement will be selected through a league-wide vote.</p>
 
 
-    <h2 class="sectionHeading" bind:this={three}>Draft</h2>
+    <h2 class="sectionHeading" id="draft">Draft</h2>
 
     <p>
         The draft will be for 15 rounds held on Sleeper fantasy football or
@@ -133,7 +80,7 @@
         approvals
     </p>
 
-    <h2 class="sectionHeading" bind:this={four}>Scoring</h2>
+    <h2 class="sectionHeading" id="scoring">Scoring</h2>
     <p>
         All agreed to scoring rules are directly inputted into the Sleeper Fantasy Football app.
     </p>
@@ -144,7 +91,7 @@
         Please reference the Georgia Tech Premier League settings in Sleeper for the complete scoring breakdown.
     </p>
 
-    <h2 class="sectionHeading" bind:this={five}>Roster Size</h2>
+    <h2 class="sectionHeading" id="roster-size">Roster Size</h2>
     <p>
         Beginning with the 2026 season, each team's active roster will consist of 15 spots: 9 starters and 6 bench spots.
     </p>
@@ -152,7 +99,7 @@
         There is also 1 IR spot available for players designated as IR (Injured Reserve) or PUP (Physically Unable to Perform) in the Sleeper Fantasy Football app. Players with Out, Suspended, Doubtful, NA, or DNR/holdout status designations are not eligible for the IR spot.
     </p>
 
-    <h2 class="sectionHeading" bind:this={six}>Starting Lineups</h2>
+    <h2 class="sectionHeading" id="starting-lineups">Starting Lineups</h2>
     <p>
         The breakdown for starting lineup is as follows: 1 QB | 2 RB | 2 WR | 1
         FLEX | 1 TE | 1 D/ST | 1 K
@@ -162,14 +109,14 @@
         Failure to do so will result in a fine.
     </p>
 
-    <h2 class="sectionHeading" bind:this={seven}>Trades</h2>
+    <h2 class="sectionHeading" id="trades">Trades</h2>
     <p>Trades are made at the discretion of the two parties involved. It is each owner's responsibility to uphold the integrity of the league during the trade process.</p>
     <p>Trades may involve rostered players only; draft pick trading is not allowed.</p>
     <p>All trades are subject to review by the Commissioner and/or Rules Committee. Trades can be expedited for timing purposes at the Commissioner's discretion.</p>
     <p>All trades must be finalized by the end of the final game of Week 12. After this deadline, no trades can be proposed or accepted until the end of the next draft.</p>
 
 
-    <h2 class="sectionHeading" bind:this={eight}>Waiver Wire</h2>
+    <h2 class="sectionHeading" id="waiver-wire">Waiver Wire</h2>
     <p>
         Waiver claims are decided between teams with bids using Free-Agent
         Acquisition Budget (FAAB)
@@ -181,7 +128,7 @@
         using the waiver bid w/ FAAB process.
     </p>
 
-    <h2 class="sectionHeading" bind:this={nine}>
+    <h2 class="sectionHeading" id="conference-format">
         Conference Format & Seeding Tiebreakers
     </h2>
     <p>The league is one super conference single table</p>
@@ -200,7 +147,7 @@
         <li>Commissioner and Rules Committee Executive Decision</li>
     </ol>
 
-    <h2 class="sectionHeading" bind:this={ten}>Playoff Format</h2>
+    <h2 class="sectionHeading" id="playoff-format">Playoff Format</h2>
     <p>Playoffs will consist of 3 rounds to decide the season Championship</p>
     <p>
         The top two seeds automatically receive a Wildcard round bye and advance
@@ -229,11 +176,11 @@
     <h3>Finals Round (Week 17)</h3>
     <p>The two Semi-final winners play in a one week final round for the Championship</p>
 
-    <h2 class="sectionHeading" bind:this={eleven}>Buy-In & Escrow</h2>
+    <h2 class="sectionHeading" id="buy-in">Buy-In & Escrow</h2>
     <p>Each owner will pay an entry fee of $200.00 that is due on Draft Day.</p>
     <p>$20 from each player is held in escrow to cover any fines that an owner may receive during a season</p>
 
-    <h2 class="sectionHeading" bind:this={twelve}>Fines & Penalties</h2>
+    <h2 class="sectionHeading" id="fines">Fines & Penalties</h2>
     <h3>$10.00 Fines</h3>
     <ol>
         <li>Attempting/succeeding to trade money/otherwise for players. All games in which the players traded for will be forfeited by each team involved in the trade </li>
@@ -244,10 +191,12 @@
         <li>An owner does not pick his draft choices in a timely manner</li>
        <li>An owner starts a player who is on bye or inactive for the week</li>
     </ol>
-    <h2 class="sectionHeading" bind:this={thirteen}>Payout</h2>
-    <li>Winner: $1200</li>
-    <li>Runner Up: $250 + all collected fines</li>
-    <li>Commissioner's Cup Allocation: $500</li>
+    <h2 class="sectionHeading" id="payout">Payout</h2>
+    <ul>
+        <li>Winner: $1200</li>
+        <li>Runner Up: $250 + all collected fines</li>
+        <li>Commissioner's Cup Allocation: $500</li>
+    </ul>
 
     <table>
         <tbody>
@@ -279,7 +228,7 @@
 
     <p>#194 Award: $50</p>
 
-    <h2 class="sectionHeading" bind:this={fourteen}>Keepers</h2>
+    <h2 class="sectionHeading" id="keepers">Keepers</h2>
 
     <p>Keeper Eligibility:</p>
     <p>Players drafted in the first three rounds of the draft in the previous year are not eligible to be kept. Your prospective keeper must be on your roster at the end of the season. Claiming a keeper is optional.</p>
@@ -297,10 +246,10 @@
     
     
 
-    <h2 class="sectionHeading" bind:this={fifteen}>#194 Award</h2>
+    <h2 class="sectionHeading" id="194-award">#194 Award</h2>
     <p>Payout given to the owner with the highest single week scoring total over the course of the season.</p>
 
-    <h2 class="sectionHeading" bind:this={sixteen}>Commissioner's Cup</h2>
+    <h2 class="sectionHeading" id="commissioners-cup">Commissioner's Cup</h2>
     <p>The commissioner's cup is a season long tournament replacing the Team of the Week that rewards the highest scoring teams each week. </p>
 <p>The top 5 highest scoring teams each week receive points towards the cup. At the end of the regular season the teams with the highest number of points get paid out.</p>
 <p>Ties are broken by the most Points scored.</p>
@@ -333,7 +282,7 @@
         </tr>
     </tbody>
 </table>
-<h2 class="sectionHeading" bind:this={seventeen}>Appendix</h2>
+<h2 class="sectionHeading" id="appendix">Appendix</h2>
 
 <h3 class="subSectionHeading">Appendix A: Commissioner Veto Escalated to League Vote Example</h3>
 <ul>
@@ -410,123 +359,226 @@
     </tbody>
 </table>
 
-<h5 style="text-align:center; margin-top:100px">Last updated August 19th, 2026</h5>
+<p class="document-end">Last updated August 19, 2026</p>
 
-</div>
+</article>
 
 <style>
     .constitution {
-        position: relative;
-        z-index: 1;
-        width: 92%;
-        max-width: 800px;
-        margin: 8em auto 10em;
+        width: min(780px, calc(100% - 48px));
+        margin: 0 auto;
+        padding: 154px 0 140px;
+    }
+
+    .constitution-header {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #343434;
     }
 
     h1 {
-        font-size: 2em;
-        line-height: 1.2em;
-        text-align: center;
-        margin: 2em 0 1.5em;
+        max-width: 720px;
+        margin: 0;
+        font-size: clamp(48px, 6vw, 76px);
+        font-weight: 400;
+        letter-spacing: -0.055em;
+        line-height: 0.98;
     }
 
-    h2 {
-        font-size: 1.5em;
-        line-height: 1.2em;
+    .last-amended {
+        margin: 18px 0 0;
+        color: #9b9b9b;
+        font-size: 15px;
+        letter-spacing: -0.01em;
     }
 
-    h3 {
-        text-decoration: underline;
-        font-size: 1.3em;
-        line-height: 1.2em;
+    .contents {
+        padding: 32px 0 42px;
+        border-bottom: 1px solid #343434;
     }
 
-    h4 {
-        text-decoration: underline;
-        margin-left: 2em;
-        font-size: 1.2em;
-        line-height: 1.2em;
+    .contents h2 {
+        margin: 0 0 20px;
+        font-size: 21px;
+        font-weight: 400;
+        letter-spacing: -0.025em;
     }
 
-    h5 {
-        margin-left: 6em;
-        font-size: 0.8em;
-        line-height: 1.1em;
+    .contents ol {
+        margin: 0;
+        padding-left: 28px;
+        color: #9b9b9b;
     }
 
-    .subBlock {
-        margin-left: 2.4em;
+    .contents li {
+        padding: 5px 0 5px 8px;
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .contents a,
+    .constitution p a {
+        color: #d4d4d1;
+        text-decoration-color: #777;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+        transition: color 160ms ease, text-decoration-color 160ms ease;
+    }
+
+    .contents a:hover,
+    .contents a:focus-visible,
+    .constitution p a:hover,
+    .constitution p a:focus-visible {
+        color: #fff;
+        text-decoration-color: #fff;
     }
 
     .sectionHeading {
-        margin: 4em 0 1.5em;
+        margin: 70px 0 24px;
+        padding-top: 34px;
+        border-top: 1px solid #343434;
+        font-size: clamp(29px, 3.4vw, 40px);
+        font-weight: 400;
+        letter-spacing: -0.04em;
+        line-height: 1.08;
+        scroll-margin-top: 92px;
     }
 
-    .subSectionHeading {
-        margin: 1.5em 0 1.5em;
+    .contents + .sectionHeading {
+        margin-top: 0;
+        border-top: 0;
     }
 
-    .appendixHeading {
-        margin: 2em 0 1em;
+    h3 {
+        margin: 34px 0 12px;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        line-height: 1.25;
     }
 
-    .scoringTable {
+    h4 {
+        margin: 30px 0 12px;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: -0.015em;
+        line-height: 1.3;
+    }
+
+    p,
+    li {
+        color: #c7c7c4;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.62;
+    }
+
+    p {
+        margin: 0 0 18px;
+    }
+
+    ul,
+    ol {
+        margin: 0 0 24px;
+        padding-left: 26px;
+    }
+
+    li + li {
+        margin-top: 4px;
+    }
+
+    strong {
+        color: #f5f5f2;
+        font-weight: 600;
+    }
+
+    table {
         width: 100%;
-        margin: 2em 0 1em;
+        margin: 28px 0 34px;
         border-collapse: collapse;
+        color: #c7c7c4;
+        font-size: 15px;
+        line-height: 1.4;
     }
 
-    .scoringTable caption {
-        margin-bottom: 0.75em;
-        font-size: 1.1em;
-        font-weight: bold;
+    caption {
+        margin-bottom: 12px;
+        color: #f5f5f2;
+        font-size: 17px;
+        font-weight: 500;
         text-align: left;
     }
 
-    .scoringTable th,
-    .scoringTable td {
-        padding: 0.6em 0.75em;
-        border: 1px solid currentColor;
+    th,
+    td {
+        padding: 12px 10px;
+        border-bottom: 1px solid #343434;
         text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        color: #f5f5f2;
+        font-weight: 500;
     }
 
     .scoringTable th:last-child,
     .scoringTable td:last-child {
-        width: 7em;
-        text-align: center;
-    }
-
-    .underscore {
-        text-decoration: underline;
-    }
-
-    .right {
+        width: 8em;
         text-align: right;
     }
 
-    .positionMaximums td {
-        min-width: 3em;
+    .document-end {
+        margin-top: 96px;
+        padding-top: 24px;
+        border-top: 1px solid #343434;
+        color: #777;
+        font-size: 13px;
+        text-align: center;
     }
 
-    .noUnderscore {
-        text-decoration: none;
+    @media (max-width: 640px) {
+        .constitution {
+            width: min(100% - 40px, 780px);
+            padding: 126px 0 96px;
+        }
+
+        .constitution-header {
+            padding-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 13vw, 58px);
+        }
+
+        .contents {
+            padding: 28px 0 36px;
+        }
+
+        .contents li,
+        p,
+        li {
+            font-size: 15px;
+        }
+
+        .sectionHeading {
+            margin-top: 58px;
+            padding-top: 28px;
+        }
+
+        table {
+            font-size: 13px;
+        }
+
+        th,
+        td {
+            padding: 10px 6px;
+        }
     }
 
-    .clickable {
-        cursor: pointer;
-    }
-
-    .clickable:hover {
-        color: #00316b;
-    }
-
-    p {
-        color: #212121;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        p {
-        color: #FFF;
-    }
+    @media (prefers-reduced-motion: reduce) {
+        .contents a,
+        .constitution p a {
+            transition: none;
+        }
     }
 </style>
