@@ -150,7 +150,7 @@
 .dump-clock-layout {
   display: flex;
   height: 100%;
-  padding: max(112px, calc(env(safe-area-inset-top) + 92px)) 28px calc(82px + env(safe-area-inset-bottom));
+  padding: max(78px, calc(env(safe-area-inset-top) + 54px)) 28px calc(82px + env(safe-area-inset-bottom));
   flex-direction: column;
   justify-content: center;
 }
@@ -450,13 +450,14 @@
   width: 100%;
   padding: 10px 12px;
   border-radius: 15px 15px 5px 15px;
+  background: #e2e4e9;
   font-size: clamp(15px, 4vw, 17px);
   line-height: 1.48;
 }
 
 .dump-recap-avatar {
   right: 20px;
-  bottom: calc(68px + env(safe-area-inset-bottom));
+  bottom: calc(60px + env(safe-area-inset-bottom));
   width: 144px;
   z-index: 0;
 }
@@ -652,7 +653,7 @@
   position: relative;
   top: calc(var(--cup-panel-top) - 18px);
   justify-content: flex-start;
-  padding-top: 88px;
+  padding-top: 72px;
   padding-bottom: calc(64px + env(safe-area-inset-bottom));
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 }
@@ -987,7 +988,7 @@
   .dump-cup-layout,
   .dump-highlight-layout,
   .dump-clock-layout {
-    padding-top: max(102px, calc(env(safe-area-inset-top) + 84px));
+    padding-top: max(68px, calc(env(safe-area-inset-top) + 48px));
   }
 
   .dump-card h2 {
@@ -996,6 +997,38 @@
 
   .dump-body-copy p {
     font-size: 14px;
+  }
+
+  .dump-monologue-layout .dump-body-copy {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .dump-monologue-layout .dump-body-copy p {
+    padding: 10px 13px;
+    font-size: 14px;
+    line-height: 1.38;
+  }
+
+  .dump-recap-layout .dump-recap-copy {
+    margin-top: 14px;
+    gap: 6px;
+  }
+
+  .dump-recap-layout .dump-recap-copy p {
+    padding: 6px 10px;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .dump-monologue-avatar,
+  .dump-recap-avatar {
+    bottom: calc(58px + env(safe-area-inset-bottom));
+    width: 100px;
+  }
+
+  .dump-recap-avatar {
+    width: 90px;
   }
 
   .dump-list-layout ol,
