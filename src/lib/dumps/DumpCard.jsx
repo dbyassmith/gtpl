@@ -237,7 +237,6 @@ function RecapCard({ card }) {
           </p>
         ))}
       </div>
-      <img alt="NattyAI" className="dump-monologue-avatar dump-recap-avatar" src="/nattyai-avatar-blink.gif" />
     </div>
   )
 }

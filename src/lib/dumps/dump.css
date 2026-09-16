@@ -455,13 +455,6 @@
   line-height: 1.48;
 }
 
-.dump-recap-avatar {
-  right: 20px;
-  bottom: calc(60px + env(safe-area-inset-bottom));
-  width: 144px;
-  z-index: 0;
-}
-
 .dump-recap-layout h2,
 .dump-recap-copy {
   position: relative;
@@ -651,9 +644,9 @@
 .dump-cup-layout {
   --cup-panel-top: max(18px, calc(50% - 360px));
   position: relative;
-  top: calc(var(--cup-panel-top) - 18px);
+  top: var(--cup-panel-top);
   justify-content: flex-start;
-  padding-top: 52px;
+  padding-top: 70px;
   padding-bottom: calc(64px + env(safe-area-inset-bottom));
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 }
@@ -985,7 +978,6 @@
   .dump-copy-layout,
   .dump-list-layout,
   .dump-parallel-layout,
-  .dump-cup-layout,
   .dump-highlight-layout,
   .dump-clock-layout {
     padding-top: max(40px, calc(env(safe-area-inset-top) + 20px));
@@ -1021,20 +1013,81 @@
     line-height: 1.3;
   }
 
-  .dump-monologue-avatar,
-  .dump-recap-avatar {
+  .dump-monologue-avatar {
     bottom: calc(58px + env(safe-area-inset-bottom));
     width: 100px;
-  }
-
-  .dump-recap-avatar {
-    width: 90px;
   }
 
   .dump-list-layout ol,
   .dump-cup-layout ol,
   .dump-research-table {
     margin-top: 18px;
+  }
+}
+
+@media (max-width: 480px) and (max-height: 760px) {
+  .dump-cup-layout {
+    --cup-panel-top: 10px;
+    padding-top: 54px;
+  }
+
+  .dump-card--commissioners-cup .dump-chrome {
+    --cup-panel-top: 10px;
+    height: 54px;
+  }
+
+  .dump-cup-title {
+    padding: 10px 16px 12px;
+    gap: 14px;
+    grid-template-columns: minmax(0, 1fr) 78px;
+  }
+
+  .dump-cup-title h2 {
+    font-size: clamp(27px, 7vw, 31px);
+    line-height: 0.92;
+  }
+
+  .dump-cup-spectrum {
+    min-height: 82px;
+    padding-left: 12px;
+    gap: 4px;
+  }
+
+  .dump-cup-spectrum span {
+    height: 5px;
+  }
+
+  .dump-cup-index > header {
+    padding: 9px 16px;
+  }
+
+  .dump-cup-layout li {
+    min-height: 0;
+    padding: 5px 16px;
+    gap: 8px;
+    grid-template-columns: 26px 1fr auto;
+  }
+
+  .dump-cup-layout li::after {
+    right: 16px;
+    left: 16px;
+  }
+
+  .dump-cup-layout li > img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .dump-cup-layout li p {
+    font-size: 13px;
+  }
+
+  .dump-cup-layout li small {
+    font-size: 8px;
+  }
+
+  .dump-cup-layout li strong {
+    font-size: 11px;
   }
 }
 
