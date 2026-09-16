@@ -9,3 +9,4 @@ static/smui.css
 build
 .vercel_build_output
 static/.DS_Store
+.env*.local
